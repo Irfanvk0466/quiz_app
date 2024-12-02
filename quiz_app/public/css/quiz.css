@@ -1,0 +1,225 @@
+body {
+    background: linear-gradient(135deg, #d87fde, #b279ff);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-box {
+    background-color: #ffffff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.timer, .question-count {
+    font-size: 18px;
+    font-weight: bold;
+    color:#4c4848;
+}
+
+.timer {
+    margin-left: 10px;
+    order: 2;
+}
+
+.question-count {
+    margin-right: 10px;
+    order: 1;
+}
+
+.question-count .badge {
+    background-color: #FFA500;
+    color: #ffffff;
+    padding: 30px 15px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.question h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0a0a0a;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.option-button {
+    background-color: #5e35b1;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    flex: 1 1 40%;
+    text-align: center;
+    max-width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.option-button:hover {
+    background-color: #7e57c2;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.next-button, .reset-button {
+    background-color: #8e24aa;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    margin: 10px;
+}
+
+
+.next-button:hover,
+.reset-button:hover {
+    background-color: #ab47bc;
+}
+
+.option-button.clicked {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+#submit-button {
+    background-color: #45a049;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto;
+    width: auto;
+    display: none;
+}
+
+#timer-square {
+    background-color: #6d6969;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-size: 36px;
+    padding: 20px 30px;
+    width: 120px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .quiz-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-buttons button {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .quiz-container h1 {
+        font-size: 28px;
+    }
+
+    .quiz-container h2 {
+        font-size: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timer {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .question-count {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-buttons button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .quiz-container h1 {
+        font-size: 24px;
+    }
+
+    .quiz-container h2 {
+        font-size: 18px;
+    }
+
+    .pagination-dots span {
+        width: 10px;
+        height: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timer {
+        margin-top: 10px;
+    }
+
+    .question-count {
+        margin-top: 10px;
+    }
+}

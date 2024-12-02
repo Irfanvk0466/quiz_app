@@ -1,0 +1,171 @@
+body {
+    background: linear-gradient(135deg, #c64cf2, #a78bf7);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.result-container {
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Row Styling */
+.qa-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    gap: 20px;
+}
+
+/* Question Box Styling */
+.question-box {
+    background: #3f51b5;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.question-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Answer Box Styling */
+.answer-box {
+    background: #2196f3;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.answer-text {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.winner {
+    background: #254beb;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 40px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and Smaller Screens */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .qa-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .question-box, .answer-box {
+        padding: 12px 18px;
+    }
+
+    .question-text {
+        font-size: 16px;
+    }
+
+    .answer-text {
+        font-size: 14px;
+    }
+
+    .winner {
+        font-size: 22px;
+        padding: 8px 20px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .qa-row {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .question-box, .answer-box {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .question-text {
+        font-size: 14px;
+    }
+
+    .answer-text {
+        font-size: 12px;
+    }
+
+    .winner {
+        font-size: 20px;
+        padding: 6px 15px;
+    }
+}
+
+/* Extra Small Screens (phones in portrait mode) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .qa-row {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .question-box, .answer-box {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .question-text {
+        font-size: 12px;
+    }
+
+    .answer-text {
+        font-size: 10px;
+    }
+
+    .winner {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+}
